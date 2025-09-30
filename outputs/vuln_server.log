@@ -1,0 +1,19 @@
+[vulnerable] Listening on :8080
+2025/09/30 16:16:51 http: panic serving [::1]:50359: some internal error happened
+goroutine 4 [running]:
+net/http.(*conn).serve.func1()
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/net/http/server.go:1943 +0xb4
+panic({0x100a911e0?, 0x100af5e58?})
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/runtime/panic.go:783 +0x120
+main.rootHandler({0x1400014bad8?, 0x100807a98?}, 0x1400014bb18?)
+	/Users/tulepbergenanel/Downloads/GolangSSSD/vulnerable/main.go:11 +0x2c
+net/http.HandlerFunc.ServeHTTP(0x100ce2640?, {0x100afa4d8?, 0x1400014e000?}, 0x10099f838?)
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/net/http/server.go:2322 +0x38
+net/http.(*ServeMux).ServeHTTP(0x0?, {0x100afa4d8, 0x1400014e000}, 0x14000000140)
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/net/http/server.go:2861 +0x190
+net/http.serverHandler.ServeHTTP({0x1400002a280?}, {0x100afa4d8?, 0x1400014e000?}, 0x1?)
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/net/http/server.go:3340 +0xb0
+net/http.(*conn).serve(0x1400011c2d0, {0x100afa950, 0x14000077920})
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/net/http/server.go:2109 +0x528
+created by net/http.(*Server).Serve in goroutine 1
+	/opt/homebrew/Cellar/go/1.25.1/libexec/src/net/http/server.go:3493 +0x384

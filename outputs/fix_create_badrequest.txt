@@ -1,0 +1,7 @@
+HTTP/1.1 400 Bad Request
+Content-Type: text/plain; charset=utf-8
+X-Content-Type-Options: nosniff
+Date: Tue, 30 Sep 2025 13:04:03 GMT
+Content-Length: 12
+
+bad request

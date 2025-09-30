@@ -1,0 +1,22 @@
+# Environment files
+.env
+
+# Binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+lab4
+
+# Go build dirs
+bin/
+build/
+dist/
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
+
+
