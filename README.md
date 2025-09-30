@@ -1,6 +1,6 @@
 ## Lab #4 – Демонстрация уязвимостей и их исправление (Go)
 
-Этот репозиторий содержит минимальный HTTP-сервер на Go с двумя версиями:
+Минимальный HTTP-сервер на Go с двумя версиями:
 
 - `vulnerable/` — демонстрация уязвимостей (для анализа в отчёте)
 - `fix/` — исправленная версия (безопаснее, но с той же функциональностью)
@@ -98,50 +98,12 @@ curl -i -X POST http://localhost:8080/create-user \
   -d '{"username":"alice","is_admin":true}'
 ```
 
-### Риски (для отчёта)
+### Риски 
 
 - Утечка внутренних ошибок и стеков раскрывает структуру приложения и упрощает атаки
 - Хранение секретов в коде и историях Git ведёт к компрометации ключей
 - Неконтролируемая десериализация позволяет эскалацию привилегий и DoS через большие тела
 
-### Примечание по учебным целям
-
-Каталог `vulnerable/` существует исключительно для демонстрации. Такой код нельзя использовать в продакшене.
-
-# Project Description
-
-Our team has made the project dedicated to Animal Shelters. In this project we have implemented Backend (Go, PostgreSQL).
-
- This is the API where people can look for pets they can adopt (full data) and also give up a pet.
-
-There are 3 instances: Shelter, User and Animal. 
-
-Our team have made a database for pets, containing description data and functional API.   
-
-## Team Members
- 
-Polina Stelmakh 22B030588
-
-Anel Tulepbergen 22B030602
-
-Alina Amreyeva 22B031240
-
-Dossym Ibray  22B030545
-
-
-## Build
-
-Run go run main.go in the integrated terminal. 
-
-## API Structure
-
-Animal Shelter REST API
-```
-POST /animals
-GET /animals/:id
-PUT /animals/:id
-DELETE /animals/:id
-```
 
 ## Instances' Structure
 ```
